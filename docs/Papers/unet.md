@@ -15,13 +15,13 @@ nav_order: 0.1
 
 encoder - decoder , connections
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/Untitled.png)
+![Untitled](./unet-img/Untitled.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/Untitled%201.png)
+![Untitled](./unet-img//Untitled%201.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/Untitled%202.png)
+![Untitled](./unet-img/Untitled%202.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/Untitled%203.png)
+![Untitled](./unet-img/Untitled%203.png)
 
 - UNet 모델의 구조를 보고, 코드를 하나씩 매칭해 가며 구현
 
@@ -52,9 +52,9 @@ self.encoder1_1 = CBR2d(in_channels=1, out_channels=64)
 self.encoder1_2 = CBR2d(in_channels=64, out_channels=64)
 ```
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/945ada4c-369d-4086-9dfb-3b0d3d99e4e2.png)
+![Untitled](./unet-img/945ada4c-369d-4086-9dfb-3b0d3d99e4e2.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/c53a4aad-3d0e-4bdf-b3e2-f0a69e98d04f.png)
+![Untitled](./unet-img/c53a4aad-3d0e-4bdf-b3e2-f0a69e98d04f.png)
 
 ---
 
@@ -71,9 +71,9 @@ self.encoder1_2 = CBR2d(in_channels=64, out_channels=64)
 self.pool1 = nn.MaxPool2d(kernel_size=2)
 ```
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/6e6e073c-c121-4a8d-8f2b-cafc7a3e0473.png)
+![Untitled](./unet-img/6e6e073c-c121-4a8d-8f2b-cafc7a3e0473.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/90a5d77d-2e7a-4212-b611-16de86724f3b.png)
+![Untitled](./unet-img/90a5d77d-2e7a-4212-b611-16de86724f3b.png)
 
 ---
 
@@ -91,9 +91,9 @@ self.decoder4_2 = CBR2d(in_channels= 2 * 512, out_channels=512)
 self.decoder4_1 = CBR2d(in_channels=512, out_channels=256)
 ```
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/1dc2c704-0665-400b-a0e9-8e620308027d.png)
+![Untitled](./unet-img/1dc2c704-0665-400b-a0e9-8e620308027d.png)
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/7e2d3479-6604-4230-bdc8-c9c056846693.png)
+![Untitled](./unet-img/7e2d3479-6604-4230-bdc8-c9c056846693.png)
 
 ```python
 # conv 1x1
@@ -430,7 +430,7 @@ class UNet(nn.Module):
 
 Bias
 
-![Untitled](UNet%20%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20437b7f8ea0da4fb387776860360d755e/Untitled%204.png)
+![Untitled](./unet-img/Untitled%204.png)
 
 conv 연산이 출력하는 feature map에 학습가능한 bias를 추가 (기본적으로 True).
 
